@@ -45,6 +45,11 @@ public class Board {
         return true;
     }
 
+    // return literal value at board[row][column]
+    public Literal getValue(int row, int column) {
+        return this.board[row][column];
+    }
+
     // getter method for board rows length
     int rowLength() {
         return this.rows;
@@ -64,7 +69,7 @@ public class Board {
                 } else if (this.board[r][c] == Literal.X) {
                     System.out.print("|X |");
                 } else {
-                    System.out.print("| |");
+                    System.out.print("|E |");
                 }
             }
             System.out.println();
